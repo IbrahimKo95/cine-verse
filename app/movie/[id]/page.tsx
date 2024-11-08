@@ -2,6 +2,15 @@ import fetchTMDB from "@/app/services/tmdb-api";
 import {Badge} from "@/components/ui/badge";
 import CastSection from "@/app/components/CastSection";
 import CardSection from "@/app/components/CardSection";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger
+} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
 
 
 export default async function MoviePage(props: any) {
@@ -24,12 +33,33 @@ export default async function MoviePage(props: any) {
             </div>
             <div className="relative z-50 px-20 max-md:px-5 grid grid-cols-5 max-md:grid-cols-1 gap-x-10">
                 <div className="flex flex-col items-center -mt-40 col-span-1">
-                    <img className="w-80" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
+                    <img
+                        className="w-80"
+                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        alt={movie.title}
+                    />
                     <div className="mt-2">
-
+                        <Dialog>
+                            <DialogTrigger className="p-3 hover:bg-secondary transition-all">
+                                Regarder le trailer
+                            </DialogTrigger>
+                            <DialogContent className="w-full max-w-3xl">
+                                <DialogHeader>
+                                    <DialogTitle>Trailer</DialogTitle>
+                                    <DialogDescription>
+                                        <iframe
+                                            className="w-full h-[60vh] rounded-lg"
+                                            src="https://www.youtube.com/embed/AAWJ21wLN4A"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </DialogDescription>
+                                </DialogHeader>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
-                <div className="col-span-4 flex flex-col gap-y-5">
+                <div className="col-span-4 flex flex-col gap-y-8">
                     <div>
                         <h1 className="text-5xl font-bold mb-5">{movie.title}</h1>
                         {movie.genres.map((genre: any) => (
@@ -48,7 +78,7 @@ export default async function MoviePage(props: any) {
             </div>
             <div className="mt-10">
                 <CardSection sectionTitle={"Similaires"} data={similarMovies.results}/>
-                <CardSection sectionTitle={"Recommendations"} data={recommendedMovies.results}/>
+                <CardSection sectionTitle={"Recommandations"} data={recommendedMovies.results}/>
             </div>
         </div>
     )

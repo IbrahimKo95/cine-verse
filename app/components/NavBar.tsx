@@ -17,10 +17,14 @@ export default function NavBar() {
                     </a>
                 </li>
                 <li>
-                    <Button className="" variant="ghost"><PopcornIcon/> Films</Button>
+                    <a href="/movies">
+                        <Button className="" variant="ghost"><PopcornIcon/> Films</Button>
+                    </a>
                 </li>
                 <li>
-                    <Button className="" variant="ghost"><ClapperboardIcon/> Séries</Button>
+                    <a href="/series">
+                        <Button className="" variant="ghost"><ClapperboardIcon/> Séries</Button>
+                    </a>
                 </li>
             </ul>
         </nav>
