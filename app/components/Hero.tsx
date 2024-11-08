@@ -13,7 +13,7 @@ export default function Hero(props: { data: Movie[] }) {
             }}
             plugins={[
                 Autoplay({
-                    delay: 7000,
+                    delay: 6000,
                 }),
             ]}
         >

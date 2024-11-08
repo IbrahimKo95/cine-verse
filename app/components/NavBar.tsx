@@ -12,7 +12,9 @@ export default function NavBar() {
                     <Input placeholder="Recherche..."></Input>
                 </li>
                 <li>
-                    <Button className="" variant="ghost"><HomeIcon/> Accueil</Button>
+                    <a href="/">
+                        <Button className="" variant="ghost"><HomeIcon/> Accueil</Button>
+                    </a>
                 </li>
                 <li>
                     <Button className="" variant="ghost"><PopcornIcon/> Films</Button>
