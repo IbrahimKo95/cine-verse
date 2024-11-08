@@ -1,6 +1,7 @@
 import fetchTMDB from "@/app/services/tmdb-api";
 import CardSection from "@/app/components/CardSection";
 import {Button} from "@/components/ui/button";
+import Hero from "@/app/components/Hero";
 
 export default async function Home() {
 
@@ -11,11 +12,14 @@ export default async function Home() {
         fetchTMDB('/movie/upcoming'),
     ])
     return (
-        <div className="mt-10">
-            <CardSection sectionTitle={"Films Populaires"} data={popular.results}/>
-            <CardSection sectionTitle={"Films les mieux notés"} data={topRated.results}/>
-            <CardSection sectionTitle={"Actuellement au cinéma"} data={nowPlaying.results}/>
-            <CardSection sectionTitle={"Prochaine sortie"} data={upcoming.results}/>
+        <div className="">
+            <Hero data={popular.results}/>
+            <div className="mt-10">
+                <CardSection sectionTitle={"Films Populaires"} data={popular.results}/>
+                <CardSection sectionTitle={"Films les mieux notés"} data={topRated.results}/>
+                <CardSection sectionTitle={"Actuellement au cinéma"} data={nowPlaying.results}/>
+                <CardSection sectionTitle={"Prochaine sortie"} data={upcoming.results}/>
+            </div>
         </div>
     );
 }
