@@ -2,6 +2,7 @@
 import { Movie } from "@/type";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import {Button} from "@/components/ui/button";
 
 export default function Hero(props: { data: Movie[] }) {
     return (
@@ -12,7 +13,7 @@ export default function Hero(props: { data: Movie[] }) {
             }}
             plugins={[
                 Autoplay({
-                    delay: 5000,
+                    delay: 7000,
                 }),
             ]}
         >
@@ -24,8 +25,9 @@ export default function Hero(props: { data: Movie[] }) {
                             alt={movie.title}
                             className="w-full h-[80vh] object-cover"
                         />
-                        <div className="absolute bottom-0 left-0 mb-56 ml-20 bg-black bg-opacity-60 text-white p-4 rounded-lg">
-                            <h2 className="text-4xl font-semibold mb-2">{movie.title}</h2>
+                        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"/>
+                        <div className="absolute bottom-0 left-0 mb-56 max-md:ml-5 max-md:mr-5 ml-20 bg-black bg-opacity-60 text-white p-4 rounded-lg">
+                            <h2 className="text-4xl font-bold mb-2">{movie.title}</h2>
                             <p className="max-w-xl line-clamp-3">{movie.overview}</p>
                         </div>
                     </CarouselItem>

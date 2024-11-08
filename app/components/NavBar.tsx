@@ -12,13 +12,13 @@ export default function NavBar() {
                     <Input placeholder="Recherche..."></Input>
                 </li>
                 <li>
-                    <Button className="font-semibold" variant="ghost"><HomeIcon/> Accueil</Button>
+                    <Button className="" variant="ghost"><HomeIcon/> Accueil</Button>
                 </li>
                 <li>
-                    <Button className="font-semibold" variant="ghost"><PopcornIcon/> Films</Button>
+                    <Button className="" variant="ghost"><PopcornIcon/> Films</Button>
                 </li>
                 <li>
-                    <Button className="font-semibold" variant="ghost"><ClapperboardIcon/> Séries</Button>
+                    <Button className="" variant="ghost"><ClapperboardIcon/> Séries</Button>
                 </li>
             </ul>
         </nav>
