@@ -2,7 +2,7 @@
 
 Cineverse est un site web permettant de rechercher des films et des séries, et d'afficher leurs informations détaillées (date de sortie, synopsis, acteurs, etc.). Ce projet utilise **Next.js**, **TailwindCSS**, et **ShadCN** pour offrir une interface moderne et réactive.
 
-![Apercu](./screenshots/screenshot.png)
+![Apercu](https://github.com/IbrahimKo95/cine-verse/blob/master/screenshots/Screenshot.png?raw=true)
 
 ## ⚙️ Technologies
 
