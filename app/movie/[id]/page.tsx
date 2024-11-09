@@ -32,7 +32,7 @@ export default async function MoviePage(props: any) {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"/>
             </div>
             <div className="relative z-50 px-20 max-md:px-5 grid grid-cols-5 max-md:grid-cols-1 gap-x-10">
-                <div className="flex flex-col items-center -mt-40 col-span-1">
+                <div className="flex flex-col items-center -mt-40 col-span-1 max-md:col-span-5">
                     <img
                         className="w-80"
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -59,12 +59,14 @@ export default async function MoviePage(props: any) {
                         </Dialog>
                     </div>
                 </div>
-                <div className="col-span-4 flex flex-col gap-y-8">
-                    <div>
-                        <h1 className="text-5xl font-bold mb-5">{movie.title}</h1>
-                        {movie.genres.map((genre: any) => (
-                            <Badge variant="secondary" key={genre.id} className="text-sm mr-2 rounded-full font-normal bg-opacity-75">{genre.name}</Badge>
-                        ))}
+                <div className="col-span-4 flex flex-col gap-y-8 max-md:col-span-5">
+                    <div className="max-md:text-center max-md:flex items-center flex-col justify-center">
+                        <h1 className="max-md:text-4xl text-5xl font-bold mb-5">{movie.title}</h1>
+                        <div>
+                            {movie.genres.map((genre: any) => (
+                                <Badge variant="secondary" key={genre.id} className="text-sm mr-2 rounded-full font-normal bg-opacity-75">{genre.name}</Badge>
+                            ))}
+                        </div>
                     </div>
                     <div>
                         <h2 className="text-2xl mb-3">Synopsis</h2>

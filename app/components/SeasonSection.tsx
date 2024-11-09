@@ -11,7 +11,7 @@ export default function SeasonSection(props: {data: any}){
         >
             <CarouselContent className="flex max-xl:gap-4">
                 {props.data.seasons.map((season: any) => (
-                    <CarouselItem key={season.id} className="basis-1/4">
+                    <CarouselItem key={season.id} className="2xl:basis-1/6">
                         <Card key={season.id} className="flex flex-col w-[20rem] overflow-hidden">
                             <img src={`https://image.tmdb.org/t/p/w500${season.poster_path}`} alt={season.name}
                                  className="w-full h-48 object-cover"/>

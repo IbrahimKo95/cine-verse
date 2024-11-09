@@ -12,7 +12,7 @@ export default function CastSection(props: {data: any}){
         >
             <CarouselContent className="flex max-xl:gap-4">
                 {props.data.cast.map((cast: any) => (
-                    <CarouselItem key={cast.id} className="basis-1/6">
+                    <CarouselItem key={cast.id} className="max-md:basis-1/2 max-lg:basis-1/3 max-xl:basis-1/4 basis-1/6">
                         <Card key={cast.id} className="flex flex-col w-52 overflow-hidden">
                             <img src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} alt={cast.name}
                                  className="w-full h-48 object-cover"/>

@@ -32,8 +32,8 @@ export default function MovieList() {
 
     return (
         <div className="px-20 max-md:px-5">
-            <h1 className="text-4xl font-bold py-10">Séries</h1>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7">
+            <h1 className="text-4xl max-md:text-2xl font-bold py-10 max-sm:text-center">Séries</h1>
+            <div className="flex items-center flex-col lg:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7">
                 {series.map((serie: Movie) => {
                     if (serie.poster_path) {
                         return (
