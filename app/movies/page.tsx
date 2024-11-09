@@ -33,9 +33,13 @@ export default function MovieList() {
         <div className="px-20 max-md:px-5">
             <h1 className="text-4xl font-bold py-10">Films</h1>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7">
-                {movies.map((movie: Movie) => (
-                    <Card key={movie.id} data={movie} />
-                ))}
+                {movies.map((movie: Movie) => {
+                    if (movie.poster_path) {
+                        return (
+                            <Card key={movie.id} data={movie}/>
+                        )
+                    }
+                })}
             </div>
             <div className="flex items-center justify-center mt-10 mb-10">
                 <Button onClick={() => handleLoadMore()}>Voir plus</Button>
