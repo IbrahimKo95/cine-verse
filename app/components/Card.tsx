@@ -1,11 +1,17 @@
+"use client"
 import {Movie} from "@/type";
 import {Badge} from "@/components/ui/badge";
+import {useEffect, useState} from "react";
 
 
 
 export default function Card(props: {data: Movie}) {
+    const [dataType, setDataType] = useState("")
+    useEffect(() => {
+        props.data.title ? setDataType("movie") : setDataType("serie");
+    }, [props.data]);
     return (
-        <a href={`/movie/${props.data.id}`}>
+        <a href={`/${dataType}/${props.data.id}`}>
             <div className="relative w-52 transition-all duration-300 group">
                 <img src={`https://image.tmdb.org/t/p/w500${props.data.poster_path}`} alt={props.data.title}
                      className="w-full h-auto mb-3 group-hover:brightness-50 "/>
