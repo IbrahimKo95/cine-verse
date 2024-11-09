@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Cineverse
 
-## Getting Started
+Cineverse est un site web permettant de rechercher des films et des séries, et d'afficher leurs informations détaillées (date de sortie, synopsis, acteurs, etc.). Ce projet utilise **Next.js**, **TailwindCSS**, et **ShadCN** pour offrir une interface moderne et réactive.
 
-First, run the development server:
+![Apercu](./screenshots/screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ⚙️ Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js** - ⚛️ Framework React pour le rendu côté serveur et le rendu statique.
+- **TailwindCSS** - 🎨 Framework CSS utilitaire pour une mise en page élégante et réactive.
+- **ShadCN** - 🧩 Collection de composants UI pour une expérience utilisateur optimale.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clonez ce dépôt** :
 
-## Learn More
+   ```bash
+   git clone https://github.com/IbrahimKo95/cine-verse.git
+   cd cine-verse
+    ```
+2. **Installez les dépendances** :
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
+3. **Configurez l'API en ajoutant une clé API dans un fichier `.env`** :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   NEXT_PUBLIC_TMDB_API_KEY=VOTRE_CLÉ_API
+   ```
+4. **Lancez l'application en mode développement** :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   ```
+5. **Ouvrez votre navigateur et visitez `http://localhost:3000`**.
