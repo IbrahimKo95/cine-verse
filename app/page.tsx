@@ -1,6 +1,5 @@
 import fetchTMDB from "@/app/services/tmdb-api";
 import CardSection from "@/app/components/CardSection";
-import {Button} from "@/components/ui/button";
 import Hero from "@/app/components/Hero";
 
 export default async function Home() {

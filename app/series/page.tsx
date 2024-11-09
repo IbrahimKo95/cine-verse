@@ -2,7 +2,6 @@
 import Card from "@/app/components/Card";
 import fetchTMDB from "@/app/services/tmdb-api";
 import {useEffect, useState} from "react";
-import {Button} from "@/components/ui/button";
 import {Movie} from "@/type";
 import {
     Pagination,

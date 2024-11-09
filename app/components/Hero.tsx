@@ -2,7 +2,6 @@
 import { Movie } from "@/type";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import {Button} from "@/components/ui/button";
 
 export default function Hero(props: { data: Movie[] }) {
     return (

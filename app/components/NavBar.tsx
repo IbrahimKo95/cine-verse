@@ -2,7 +2,7 @@
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {ClapperboardIcon, HomeIcon, MenuIcon, PopcornIcon} from "lucide-react";
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 
 export default function NavBar() {
     const [query, setQuery] = useState<string>("");
