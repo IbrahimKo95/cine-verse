@@ -7,23 +7,21 @@ import {Movie} from "@/type";
 
 
 export default function MovieList() {
-    const [movies, setMovies] = useState<Movie[]>([]);
+    const [series, setSeries] = useState<Movie[]>([]);
     const [page, setPage] = useState(1);
 
-    // Charger les films initialement
     useEffect(() => {
-        const loadMovies = async () => {
-            const response = await fetchTMDB(`/discover/movie?page=${page}`);
-            setMovies((prevMovies) => {
-                const newMovies = response.results.filter(
-                    (newItem: Movie) => !prevMovies.some((item) => item.id === newItem.id)
+        const loadSeries = async () => {
+            const response = await fetchTMDB(`/discover/tv?page=${page}`);
+            setSeries((prevSeries) => {
+                const newSeries = response.results.filter(
+                    (newItem: Movie) => !prevSeries.some((item) => item.id === newItem.id)
                 );
-                return [...prevMovies, ...newMovies];
+                return [...prevSeries, ...newSeries];
             });
         };
-        loadMovies();
+        loadSeries();
     }, [page]);
-
 
     const handleLoadMore = () => {
         setPage((prevPage) => prevPage + 1);
@@ -31,10 +29,10 @@ export default function MovieList() {
 
     return (
         <div className="px-20 max-md:px-5">
-            <h1 className="text-4xl font-bold py-10">Films</h1>
+            <h1 className="text-4xl font-bold py-10">Séries</h1>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7">
-                {movies.map((movie: Movie) => (
-                    <Card key={movie.id} data={movie} />
+                {series.map((series: Movie) => (
+                    <Card key={series.id} data={series} />
                 ))}
             </div>
             <div className="flex items-center justify-center mt-10 mb-10">

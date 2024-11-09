@@ -4,7 +4,7 @@ import Card from "@/app/components/Card";
 
 
 export default async function SearchResult(props: any) {
-    const query = props.params.id;
+    const query = await props.params.id;
     const [movies] = await Promise.all([
         fetchTMDB('/search/multi?query='+query),
     ])
