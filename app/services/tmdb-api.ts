@@ -1,6 +1,5 @@
 import axios from "axios";
 import dotenv from 'dotenv';
-import {SearchResults} from "@/type";
 dotenv.config();
 
 const URL = 'https://api.themoviedb.org/3';

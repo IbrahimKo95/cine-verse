@@ -8,6 +8,7 @@ import {useEffect, useState} from "react";
 export default function Card(props: {data: Movie}) {
     const [dataType, setDataType] = useState("")
     useEffect(() => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         props.data.title ? setDataType("movie") : setDataType("serie");
     }, [props.data]);
     return (
