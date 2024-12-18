@@ -19,20 +19,10 @@ export default function Card(props: {data: Movie}) {
                 <div className="absolute top-5 left-5">
                     <Badge className={`rounded-full text-sm ${dataType === "serie" ? "bg-purple-800" : ""}`}>{dataType === "movie" ? "FILM" : "SERIE"}</Badge>
                 </div>
-                <div className="opacity-0 absolute left-[-5px] bottom-5 group-hover:left-5 group-hover:opacity-100 text-lg transition-all duration-300 delay-100">
+                <div className="opacity-0 absolute left-[-5px] bottom-5 right-5 group-hover:left-5 group-hover:opacity-100 text-lg transition-all duration-300 delay-100">
                     <p className="font-bold">{props.data.title}</p>
                     <div className="flex gap-x-3">
-                        {props.data.release_date ? (
-                            <Badge>{props.data.release_date}</Badge>
-                        ) : (
-                            <Badge>Inconnu</Badge>
-                        )}
-                        {props.data.vote_average ? (
-                            <Badge className="">{props.data.vote_average.toFixed(1)}</Badge>
-                        ): (
-                            <Badge>Non noté</Badge>
-                        )}
-
+                        <p className="text-sm line-clamp-4 overflow-hidden">{props.data.overview}</p>
                     </div>
                 </div>
             </div>
